@@ -1,4 +1,4 @@
-"""Store URL Configuration
+"""Online_store URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -10,16 +10,16 @@ Class-based views
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 Including another URLconf
-    1. Import the include() function: from django.urls import include, path
+    1. Import the include function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
 from django.urls import path
-from model.views import hello, now_date, goodbye
+from products.views import main, product_view,queen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', hello),
-    path('nowdate/', now_date),
-    path('goodbye/', goodbye)
+    path('',main),
+    path('products/', product_view),
+    path("products/mc'Queen/",queen)
 ]
